@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Official Webpage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    /* 
+At first, we'll write all the base-styling of the document that is necessary in almost every web-page, properties vary though 
+
+ 
+
+These are: 
+
+ 
+
+ 
+
+Set the size of all the elements to border-box 
+
+Set the padding and margin of all the elements to zero 
+
+  */
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+
+
+    /* Set the font-family and font size of the body along with the line height 
+
+Set the color and background-color of the body  */
+
+
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+        color: #000;
+        background-color: #fff;
+    }
+
+
+
+
+
+    /* Set the color of the links 
+
+Set the text-decoration for links  */
+
+
+
+    a {
+        color: #262626;
+        text-decoration: none;
+    }
+
+
+
+
+
+    /* Set the list-style of ul to none to take away bullets   */
+
+
+
+    ul {
+        list-style: none;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /* We've designed the body of the html in three different parts :- 
+
+1) Container 
+
+2) Section 
+
+3) Footer 
+
+ 
+
+For now, we'll style .container, which is a parent container  */
+    #menu {
+        display: none;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1367px;
+        margin: auto;
+    }
+
+
+
+    /* Now, we'll design the Navigation bar, which is classified as .main-nav  */
+
+    /* Navigation */
+
+    .main-nav {
+        display: flex;
+        align-items: center;
+        height: 54px;
+        padding: 20px 0;
+        font-size: 13px;
+        justify-content: space-between;
+        /* This will divide all the three elements evenly but we do not want the space between the logo and the main-menu. For this reason, we set flex: 1 to the main-menu, which will shift it right and the space between the logo and main-menu will be zero. We can add the gap manually by giving it some margin or say padding*/
+    }
+
+    /* We're changing the size of the logo so targetting .logo in .main-nav */
+    .main-nav .logo {
+        width: 110px;
+    }
+
+    .main-nav ul {
+        display: flex;
+        align-items: center;
+    }
+
+    /* targetting to seperate from each other */
+    .main-nav ul li {
+        padding: 0 10px;
+    }
+
+    .main-nav ul li a {
+        padding-bottom: 2px;
+    }
+
+    /* targetting to create a underline effect when hovered */
+    .main-nav ul li a:hover {
+        border-bottom: 2px solid #262626;
+    }
+
+    .main-nav ul.main-menu {
+        flex: 1;
+        margin-left: 20px;
+    }
+
+    .main-nav .right-menu li a {
+        display: flex;
+        align-items: center;
+    }
+
+    .main-nav .right-menu span {
+        font-size: 18px;
+        padding-left: 3px;
+    }
+
+    .main-nav .right-menu .account_circle {
+        font-size: 34px;
+        padding-left: 3px;
+        color: gray;
+    }
+
+    /* Now, we're going to add styles to the header of the file, the area which is just below the navigation bar */
+
+    /* We'll design the button which is a common class */
+
+    .buttons {
+        display: flex;
+    }
+
+    .btn {
+        cursor: pointer;
+        background-color: #262626;
+        color: #fff;
+        border: 0;
+        font-weight: bold;
+        padding: 10px 20px;
+        font-size: 15px;
+        border-radius: 2px;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+    }
+
+    .btn2 {
+        color: #262626;
+        background: none;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Now, we'll design the actual showcase */
+
+
+    /* Here, we've changed the background properties such that the image fits automatically as per the size of the window or the web */
+    .showcase {
+        width: calc(100vw - 17px);
+        height: 475px;
+        background: url('img/showcase.jpg') no-repeat center center/cover;
+        padding: 50px 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .new {
+        padding: 2.5px 12px;
+        display: inline-block;
+        max-width: 56px;
+        background-color: #fff;
+        color: #950c17;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    h2 {
+        font-size: 2.3125rem;
+        font-weight: 600;
+        padding-bottom: 20px;
+    }
+
+    .showcase p {
+        max-width: 475px;
+        padding-bottom: 25px;
+        font-weight: 400;
+    }
+
+    /* Now, we'll style the container 3, which is just below .container2. This holds icons with links */
+
+    .container3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container3 .control-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .container3 span {
+        font-size: 44px;
+        font-weight: 200;
+    }
+
+    .container3 .chevron_left,
+    .container3 .chevron_right {
+        padding: 0 20px;
+    }
+
+    .container3 .fiber_manual_record {
+        font-size: 20px;
+    }
+
+    .container3 .icon-buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .container3 .icon-buttons .icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .container3 .icon-buttons .icon img {
+        margin-bottom: 10px;
+    }
+
+    /* Now, we'll desing the part just below the icons */
+
+    .container4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 45px 75px;
+    }
+
+
+    /* Here, we've set the width of image in percentage which is useful in making it responsive */
+    .container4 img {
+        width: 100%;
+    }
+
+    .container4 .content-box {
+        display: flex;
+        flex-direction: column;
+        padding: 0 12px;
+    }
+
+    .container4 .content-box .new {
+        margin-top: 16px;
+        background-color: #950c17;
+        color: #fff;
+    }
+
+    .no-new .new {
+        visibility: hidden;
+    }
+
+    .container4 .content-box h3 {
+        font-size: 1.8rem;
+        margin-bottom: 16px;
+        font-weight: 600;
+    }
+
+    .container4 .content-box p {
+        margin-bottom: 16px;
+    }
+
+    .container4 .content-box a {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        font-weight: 600;
+        color: #950c17;
+    }
+
+    .container5holder {
+        padding: 0 85px 0 85px;
+    }
+
+    .container5 {
+        background: url(img/container5bg.avif) no-repeat center center/cover;
+        display: flex;
+        width: 100%;
+    }
+
+    .container5 h2 {
+        padding-bottom: 20px;
+        font-size: 2.3rem;
+        font-weight: 600;
+    }
+
+    .container5 p {
+        max-width: 475px;
+        padding-bottom: 24px;
+    }
+
+    .container6 {
+        margin-top: 70px;
+    }
+
+    .container6 .container4 {
+        padding-top: 0px;
+    }
+
+    .container6 h2 {
+        margin-left: 87px;
+    }
+
+    .container7 .footernote,
+    .container7 .footer {
+        padding: 35px 75px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 24px;
+        background-color: #f2f2f2;
+        color: #616161;
+    }
+
+    .container7 h1 {
+        font-size: 15px;
+        font-weight: 600;
+        padding-bottom: 4px;
+    }
+
+    .container7 li {
+        font-size: 11px;
+        padding: 8px 0px;
+    }
+
+    .container7 .footer {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0px 75px 16px 75px;
+    }
+
+    .container7 .footer ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .container7 .footer li {
+        padding-right: 24px;
+    }
+
+    @media (max-width:700px) {
+        .main-nav ul {
+            display: none;
+        }
+
+        .showcase p {
+            display: none;
+        }
+
+        .container5holder {
+            padding: 0 40px 0 40px;
+        }
+
+        .container4 {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 20px 20px;
+        }
+
+        .container7 .footernote {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .container7 .footer {
+            justify-content: flex-start;
+        }
+
+        .container3 .icon-buttons {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #menu {
+            display: flex;
+            justify-content: flex-end;
+            position: absolute;
+            top: 15px;
+            right: 29px;
+
+        }
+    }
+
+    @media (max-width:400px) {
+        .showcase * {
+            display: none;
+        }
+
+        .container5holder {
+            padding: 0 20px 0 20px;
+        }
+
+        .container4 {
+            grid-template-columns: 1fr;
+            padding: 20px 20px;
+        }
+
+        .container7 .footernote {
+            grid-template-columns: 1fr;
+        }
+
+        .container7 .footer ul {
+            flex-direction: column;
+        }
+    }
+</style>
+
+<body>
+    <span class="material-symbols-outlined" id="menu">
+        menu
+    </span>
+
+    <!-- Here, we're making a container to fit the navigation bar -->
+
+    <div class="container">
+
+        <!-- Here, we've created a navigation bar inside the container and gave it a class main-nav -->
+
+        <!-- Navigation -->
+
+        <nav class="main-nav">
+
+            <!-- In this bar, we'll have three different parts. One is the left part, which holds the image. The second is the middle one, which will have the main-menu and the last on the right will have some icons -->
+
+            <img src="img/logo.png" alt="This is the logo of the site" class="logo">
+
+            <ul class="main-menu">
+
+                <!-- We will make an undordered list with all the items as <li> and later style them with the display:flex property -->
+
+                <li>
+                    <a href="#">Microsoft 365</a>
+                </li>
+                <li>
+                    <a href="#">Teams</a>
+                </li>
+                <li>
+                    <a href="#">Windows</a>
+                </li>
+                <li>
+                    <a href="#">Surface</a>
+                </li>
+                <li>
+                    <a href="#">Xbox</a>
+                </li>
+                <li>
+                    <a href="#">Deals</a>
+                </li>
+                <li>
+                    <a href="#">Support</a>
+                </li>
+
+            </ul>
+            <ul class="right-menu">
+                <li><a href="#">All Microsoft
+
+                        <!-- Here, we've given a class named fas and fas-search, which is taken as a reference from font-awesome.com -->
+
+                        <span class="material-symbols-outlined">
+                            keyboard_arrow_down
+                        </span>
+                    </a></li>
+                <li><a href="#">Search
+                        <span class="material-symbols-outlined">
+                            search
+                        </span>
+                    </a></li>
+                <li><a href="#">Cart
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </a></li>
+                <li><a href="#">Nikhil
+                        <span class="material-symbols-outlined account_circle">
+                            account_circle
+                        </span>
+                    </a></li>
+            </ul>
+        </nav>
+
+
+
+    </div>
+    <div class="container2">
+        <!-- Here, we're creating the content just below the navigation bar and inside .container2. The class that we've used is showcase -->
+
+        <!-- showcase -->
+
+        <header class="showcase">
+            <span class="new">New</span>
+            <h2>Surface Laptop 5</h2>
+            <p>Sleek portability and multitasking speed powered by 12th Gen Intel® Core, with Windows 11. Questions?
+                Book an online shopping appointment with a product expert.</p>
+            <div class="buttons"><a href="#" class="btn">Pre-Order now</a><a href="#" class="btn btn2">Book an
+                    appointment<span class="material-symbols-outlined keyboard_arrow_right">
+                        keyboard_arrow_right
+                    </span></a></div>
+        </header>
+    </div>
+    <div class="container3">
+        <div class="control-buttons">
+            <span class="material-symbols-outlined chevron_left">
+                chevron_left
+            </span>
+            <span class="material-symbols-outlined fiber_manual_record">
+                fiber_manual_record
+            </span>
+            <span class="material-symbols-outlined fiber_manual_record">
+                fiber_manual_record
+            </span>
+            <span class="material-symbols-outlined  chevron_right">
+                chevron_right
+            </span>
+        </div>
+        <div class="icon-buttons">
+            <div class="icon">
+                <img src="img/container3.webp" alt="first">
+                <a href="#">Choose your Microsoft 365</a>
+            </div>
+            <div class="icon">
+                <img src="img/container32.webp" alt="first">
+                <a href="#">Shop Surface Devices</a>
+            </div>
+            <div class="icon">
+                <img src="img/container33.webp" alt="first">
+                <a href="#">Buy Xbox games and consoles</a>
+            </div>
+            <div class="icon">
+                <img src="img/container34.webp" alt="first">
+                <a href="#">Get Windows 11</a>
+            </div>
+            <div class="icon">
+                <img src="img/container35.webp" alt="first">
+                <a href="#">Find your next PC</a>
+            </div>
+            <div class="icon">
+                <img src="img/container36.webp" alt="first">
+                <a href="#">Shop Business</a>
+            </div>
+        </div>
+    </div>
+    <div class="container4">
+        <div class="content-box">
+            <img src="img/contentcard1.webp" alt="cardone"><span class="new">New</span>
+            <h3>Surface Pro 9</h3>
+            <p>The tablet flexibility you want and the laptop performance you need — all in one ultra-portable device.
+            </p>
+            <a href="#">Pre-order now <span class="material-symbols-outlined keyboard_arrow_right">
+                    keyboard_arrow_right
+                </span></a>
+        </div>
+        <div class="content-box">
+            <img src="img/contentcard2.webp" alt="cardone"><span class="new">New</span>
+            <h3>Surface Studio 2+</h3>
+            <p>The most versatile all-in-one device that gives you a large canvas to express yourself at any angle.
+            </p>
+            <a href="#">Pre-order now <span class="material-symbols-outlined keyboard_arrow_right">
+                    keyboard_arrow_right
+                </span></a>
+        </div>
+        <div class="content-box no-new">
+            <img src="img/contentcard3.webp" alt="cardone"><span class="new">New</span>
+            <h3>Power your dreams</h3>
+            <p>Experience a new era in next-gen performance with Xbox Series X and Xbox Series S.
+            </p>
+            <a href="#">Xbox Series X<span class="material-symbols-outlined keyboard_arrow_right">
+                    keyboard_arrow_right
+                </span></a>
+        </div>
+        <div class="content-box">
+            <img src="img/contentcard4.jpg" alt="cardone"><span class="new">New</span>
+            <h3>Xbox Elite, your way</h3>
+            <p>Endless customization options from Xbox Design Lab make it easy to create a personalized Xbox Elite
+                Wireless Controller Series 2 for yourself or the gamer on your list.
+            </p>
+            <a href="#">Design yours with Xbox Design Lab<span class="material-symbols-outlined keyboard_arrow_right">
+                    keyboard_arrow_right
+                </span></a>
+        </div>
+    </div>
+    <div class="container5holder">
+        <div class="container5 showcase">
+            <h2>
+                PC Game Pass
+            </h2>
+            <p>Unwrap 100+ great games and EA Play, plus get your first month for $1. Offer available to new subscribers
+                only.</p>
+            <div class="buttonj"><a href="#" class="btn">Join now</a></div>
+        </div>
+    </div>
+    <div class="container6">
+        <h2>For Business</h2>
+        <div class="container4">
+            <div class="content-box">
+                <img src="img/contentcard21.webp" alt="cardone"><span class="new">New</span>
+                <h3>Surface Pro 9 for Business</h3>
+                <p>Empower flexible, all-day impact with tablet portability and laptop performance.
+                </p>
+                <a href="#">Pre-order now <span class="material-symbols-outlined keyboard_arrow_right">
+                        keyboard_arrow_right
+                    </span></a>
+            </div>
+            <div class="content-box no-new">
+                <img src="img/contentcard22.webp" alt="cardone"><span class="new">New</span>
+                <h3>Get Microsoft Teams for free</h3>
+                <p>Online meetings, chat, and shared cloud storage--all in one place.
+                </p>
+                <a href="#">Sign up for free<span class="material-symbols-outlined keyboard_arrow_right">
+                        keyboard_arrow_right
+                    </span></a>
+            </div>
+            <div class="content-box no-new">
+                <img src="img/contentcard23.webp" alt="cardone"><span class="new">New</span>
+                <h3>Welcome to your Windows 365 Cloud PC</h3>
+                <p>Securely stream your Windows experience from the Microsoft cloud to any device.
+                </p>
+                <a href="#">Get it today<span class="material-symbols-outlined keyboard_arrow_right">
+                        keyboard_arrow_right
+                    </span></a>
+            </div>
+            <div class="content-box no-new">
+                <img src="img/contentcard24.webp" alt="cardone"><span class="new">New</span>
+                <h3>Thrive in a hybrid world</h3>
+                <p>Discover tools, resources, and startegies to help your employees succeed in the new world of flexible
+                    work.
+                </p>
+                <a href="#">Learn more<span class="material-symbols-outlined keyboard_arrow_right">
+                        keyboard_arrow_right
+                    </span></a>
+            </div>
+        </div>
+    </div>
+    <div class="container7">
+        <div class="footernote">
+            <ul class="ul1">
+                <h1>What's new</h1>
+                <li>
+                    Surface Pro 9
+                </li>
+                <li>Surface Laptop 5</li>
+                <li>Surface Studio 2+</li>
+                <li>Surface Laptop Go 2</li>
+                <li>Surface Laptop Studio</li>
+                <li>Surface Duo 2</li>
+                <li>Microsoft 365</li>
+                <li>Windows 11 apps</li>
+            </ul>
+            <ul class="ul1">
+                <h1>Microsoft Store</h1>
+                <li>
+                    Account profile
+                </li>
+                <li>Download Center</li>
+                <li>Microsoft Store Support</li>
+                <li>Return</li>
+                <li>Order tracking</li>
+                <li>Virtual workshops and training</li>
+                <li>Microsoft Store Promise</li>
+                <li>Personal shopping appointments</li>
+            </ul>
+            <ul class="ul1">
+                <h1>Education</h1>
+                <li>
+                    Microsoft in education
+                </li>
+                <li>Devices for education</li>
+                <li>Microsoft Teams for Education</li>
+                <li>Microsoft 365 Education</li>
+                <li>Office Education</li>
+                <li>Educator training and development</li>
+                <li>Deals for students and parents</li>
+                <li>Azure for students</li>
+            </ul>
+            <ul class="ul1">
+                <h1>Business</h1>
+                <li>
+                    Microsoft Cloud
+                </li>
+                <li>Microsoft Security</li>
+                <li>Azure</li>
+                <li>Dynamics 365</li>
+                <li>Microsoft 365</li>
+                <li>Microsoft Advertising</li>
+                <li>Microsoft Industry</li>
+                <li>Microsoft Teams</li>
+            </ul>
+            <ul class="ul1">
+                <h1>Developer & IT</h1>
+                <li>
+                    Developer Center
+                </li>
+                <li>Documentation</li>
+                <li>Microsoft Learn</li>
+                <li>Microsoft Tech Community</li>
+                <li>Azure Marketplace</li>
+                <li>AppSource</li>
+                <li>Microsoft Power Platform</li>
+                <li>Visual Studio</li>
+            </ul>
+            <ul class="ul1">
+                <h1>Company</h1>
+                <li>
+                    Careers
+                </li>
+                <li>About Microsoft</li>
+                <li>Company news</li>
+                <li>Privacy at Microsoft</li>
+                <li>Investors</li>
+                <li>Diversity and inclusion</li>
+                <li>Accessibility</li>
+                <li>Sustainability</li>
+            </ul>
+        </div>
+        <footer class="footer">
+            <ul>
+                <li>Contact Microsoft</li>
+                <li>Privacy</li>
+                <li>Terms of use</li>
+                <li>Trademarks</li>
+                <li>About our ads</li>
+                <li> &copy;Microsoft 2022</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>
